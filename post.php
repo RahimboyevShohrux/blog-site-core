@@ -224,7 +224,7 @@ while($coment=mysqli_fetch_assoc($query) )  {
                 die("xatolik".mysqli_connect_error());
             }
            
-            $query=mysqli_query($con,"select * from post  order by post_id desc limit 5 ;");
+            $query=mysqli_query($con,"select * from post  order by post_id asc limit 3 ;");
             
             
             while($roww=mysqli_fetch_assoc($query)){

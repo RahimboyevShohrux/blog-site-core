@@ -1,21 +1,30 @@
 <?php
 include 'connect.php';
-if (isset($_POST['submit'])) {
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+if (isset($_REQUEST['submit'])) {
+
+
+    $email = $_REQUEST['email'];
+    $password = $_REQUEST['password'];
     $error = false;
     echo $password." ".$email;
 
     $query = mysqli_query($con, "select * from registr where email='$email' and password='$password';");
+    while ($row=mysqli_fetch_assoc($query)){
+        $author=$row['username'];
+    }
     if (mysqli_num_rows($query) == 1) {
 
-        header('location:index.php');
+        header("location:adpost.php?id=$author");
         $message = "successful";
     } else
         header('location:login.php');
     $error = true;
     $message = "Email or Password is incorrect";
+
+
+
+
 }
 ?>
 <!doctype html>
@@ -37,7 +46,7 @@ if (isset($_POST['submit'])) {
 <div class="container">
     <div class="screen">
         <div class="screen__content">
-            <form action="" method="post" class="login">
+            <form action="#" method="get" class="login">
                 <div class="login__field">
                     <i class=" login__icon fas fa-user"></i>
                     <input name="email" type="text" class="login__input" placeholder=" Email">
