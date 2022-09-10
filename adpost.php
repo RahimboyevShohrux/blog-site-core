@@ -1,7 +1,7 @@
 <?php
 include_once 'connect.php';
 if(isset($_POST['go'])){
-    $author=$_POST['author'];
+    $author=$_GET['id'];
     $title=$_POST['title'];
     $text=$_POST['text'];
     $filename = $_FILES['file']['name'];
@@ -54,10 +54,7 @@ if(isset($_POST['go'])){
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
         </p>
-        <p>
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author">
-        </p>
+
         <p>
             <label for="password">IMg</label>
             <input type="file" name="file" id="password">
