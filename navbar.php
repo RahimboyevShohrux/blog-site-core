@@ -6,7 +6,7 @@
     </button>
     <div class="container">
         <!-- Begin Logo -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="assets/img/logo.png" alt="logo">
         </a>
         <!-- End Logo -->
@@ -19,7 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Addpost</a>
                 </li>
-                <li class="nav-item">
+                <li  class="nav-item text text-warning">
                     <a class="nav-link" href="Admin.php">Admin</a>
                 </li>
             </ul>
