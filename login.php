@@ -59,6 +59,7 @@ if (isset($_REQUEST['submit'])) {
                     <span class="button__text">Log In Now</span>
                     <i class="button__icon fas fa-chevron-right"></i>
                 </button>
+                <a class=" mt-2 p-2 " href="registr.php">Create accaunt</a>
             </form>
             <div class="social-login">
                 <h3>log in via</h3>
@@ -78,7 +79,26 @@ if (isset($_REQUEST['submit'])) {
     </div>
 </div>
 
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/jquery-3.6.1.min.js"></script>
+
+<?php
+if (isset($_GET['k'])){
+    ?>
 
 
+<script>Swal.fire({
+        title: 'Tizimga muavfaqiyatli kirdingiz',
+        icon: 'success',
+        timer: 1500,
+        showCloseButton: false,
+        showCancelButton: false,
+        showConfirmButton: false
+    })</script>
+<?php
+}
+
+?>
 </body>
 </html>
+
